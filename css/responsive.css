@@ -1,0 +1,475 @@
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+
+/* TABLETTE */
+
+@media (max-width: 900px) {
+
+    .header-container {
+        min-height: 76px;
+    }
+
+    .logo {
+        width: 165px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-navigation {
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 20px;
+
+        padding: 25px 20px 30px;
+
+        background: #FFFFFF;
+
+        border-top: 1px solid rgba(0, 16, 48, 0.08);
+
+        box-shadow: 0 15px 30px rgba(0, 16, 48, 0.08);
+    }
+
+    .main-navigation.active {
+        display: flex;
+    }
+
+    .nav-list {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+    }
+
+    .nav-item {
+        border-bottom: 1px solid rgba(0, 16, 48, 0.07);
+    }
+
+    .nav-link {
+        width: 100%;
+
+        padding: 14px 0;
+
+        font-size: 16px;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .header-cta {
+        width: 100%;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: min(100% - 30px, var(--container-width));
+    }
+
+    .logo {
+        width: 145px;
+    }
+
+    .header-container {
+        min-height: 70px;
+    }
+}
+/* =========================================
+   HERO RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding-top: 60px;
+        padding-bottom: 70px;
+    }
+
+
+    .hero-content {
+        text-align: center;
+    }
+
+
+    .hero-label {
+        justify-content: center;
+    }
+
+
+    .hero-title {
+        margin-inline: auto;
+    }
+
+
+    .hero-description {
+        margin-inline: auto;
+    }
+
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+
+    .hero-trust {
+        justify-content: center;
+    }
+
+
+    .hero-visual {
+        min-height: 470px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .hero-container {
+        gap: 30px;
+
+        padding-top: 45px;
+        padding-bottom: 50px;
+    }
+
+
+    .hero-title {
+        font-size: 40px;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+
+    .hero-actions {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+
+    .hero-trust {
+        flex-wrap: wrap;
+
+        gap: 14px;
+    }
+
+
+    .trust-separator {
+        display: none;
+    }
+
+
+    .hero-visual {
+        min-height: 390px;
+    }
+
+
+    .hero-card {
+        min-height: 370px;
+
+        padding: 22px;
+
+        border-radius: 22px;
+    }
+
+
+    .hero-logo {
+        width: 210px;
+    }
+
+
+    .hero-glow {
+        width: 270px;
+        height: 270px;
+    }
+
+
+    .floating-element {
+        padding: 8px 12px;
+
+        font-size: 9px;
+    }
+
+
+    .floating-one {
+        right: 0;
+    }
+
+
+    .floating-two {
+        left: -5px;
+    }
+
+
+    .floating-three {
+        right: -5px;
+    }
+
+}
+/* =========================================
+   SECTIONS RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .section {
+        padding: 85px 0;
+    }
+
+
+    .advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .process-step {
+        border-bottom: 1px solid rgba(0, 48, 112, 0.15);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .section {
+        padding: 70px 0;
+    }
+
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+
+    .section-heading p {
+        font-size: 15px;
+    }
+
+
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .advantage-card {
+        min-height: auto;
+
+        padding: 30px;
+    }
+
+
+    .domains-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .domain-card {
+        min-height: auto;
+
+        padding: 28px;
+    }
+
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .process-step {
+        padding: 25px 0;
+    }
+
+
+    .process-step:not(:last-child)::after {
+        display: none;
+    }
+
+
+    .process-number {
+        margin-bottom: 20px;
+    }
+
+}
+/* =========================================================
+   RÉALISATIONS - RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .portfolio-hero-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+    }
+
+    .portfolio-hero-content {
+        margin: 0 auto;
+    }
+
+    .portfolio-hero-content > p {
+        margin: 0 auto;
+    }
+
+    .portfolio-hero-meta {
+        justify-content: center;
+    }
+
+    .portfolio-hero-visual {
+        height: 350px;
+    }
+
+    .portfolio-heading {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .portfolio-approach-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .portfolio-approach-grid > div:last-child {
+        padding-top: 0;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .portfolio-hero {
+        min-height: auto;
+    }
+
+    .portfolio-hero-container {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .portfolio-hero h1 {
+        font-size: 44px;
+        letter-spacing: -2px;
+    }
+
+    .portfolio-hero-meta {
+        gap: 20px;
+    }
+
+    .portfolio-hero-visual {
+        height: 300px;
+    }
+
+    .portfolio-hero-card {
+        width: 190px;
+        height: 230px;
+    }
+
+    .orbit-three {
+        width: 330px;
+        height: 330px;
+    }
+
+    .orbit-two {
+        width: 270px;
+        height: 270px;
+    }
+
+    .orbit-one {
+        width: 210px;
+        height: 210px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-project-featured {
+        grid-column: auto;
+        display: block;
+    }
+
+    .portfolio-project-featured .portfolio-project-visual,
+    .portfolio-project-visual {
+        min-height: 250px;
+    }
+
+    .portfolio-project-screen {
+        width: 80%;
+    }
+
+    .portfolio-project-content {
+        padding: 25px;
+    }
+
+    .portfolio-filters {
+        gap: 8px;
+    }
+
+    .portfolio-filter {
+        padding: 0 14px;
+        font-size: 11px;
+    }
+
+    .portfolio-approach {
+        padding: 70px 0;
+    }
+
+    .portfolio-cta {
+        padding: 60px 0;
+    }
+
+    .portfolio-cta-box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 35px 25px;
+    }
+
+    .portfolio-cta-box .btn {
+        width: 100%;
+    }
+
+}

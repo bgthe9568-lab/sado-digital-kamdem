@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Sado Digital</title>
+  <meta name="description" content="Contactez Sado Digital pour vos projets numériques.">
+
+  <style>
+    :root {
+      --navy:#001030;
+      --blue:#003070;
+      --cyan:#00c8e8;
+      --green:#50d820;
+      --white:#ffffff;
+      --background:#f5f8fc;
+      --text:#24344d;
+      --muted:#64748b;
+      --border:#e2eaf4;
+    }
+
+    * { box-sizing:border-box; margin:0; padding:0; }
+
+    body {
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--text);
+      background:var(--background);
+      line-height:1.7;
+    }
+
+    a { color:inherit; }
+
+    .container {
+      width:min(1180px,calc(100% - 40px));
+      margin:auto;
+    }
+
+    .site-header {
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:white;
+      box-shadow:0 3px 18px rgba(0,20,60,.06);
+    }
+
+    .header-container {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      min-height:126px;
+    }
+
+    .logo { width:205px; max-height:95px; object-fit:contain; }
+
+    .main-navigation {
+      display:flex;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+
+    .nav-list {
+      display:flex;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:22px;
+      list-style:none;
+    }
+
+    .nav-link {
+      position:relative;
+      display:inline-block;
+      padding:10px 0;
+      color:var(--navy);
+      font-size:14px;
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    .nav-link:hover,.nav-link.active { color:#008bb8; }
+
+    .nav-link::after {
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:2px;
+      width:100%;
+      height:2px;
+      background:linear-gradient(90deg,#0875c9,#00b9b0 45%,#36c832);
+      transform:scaleX(0);
+      transform-origin:left;
+      transition:transform .3s ease;
+    }
+
+    .nav-link:hover::after,.nav-link.active::after { transform:scaleX(1); }
+
+    .header-cta {
+      padding:12px 17px;
+      border-radius:9px;
+      background:var(--blue);
+      color:white;
+      font-size:13px;
+      font-weight:bold;
+      text-decoration:none;
+      white-space:nowrap;
+    }
+
+    .hero {
+      padding:80px 0;
+      background:linear-gradient(135deg,var(--navy),var(--blue));
+      color:white;
+    }
+
+    .eyebrow {
+      display:block;
+      margin-bottom:14px;
+      color:var(--cyan);
+      font-size:13px;
+      font-weight:bold;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+
+    h1 {
+      margin-bottom:20px;
+      font-size:clamp(36px,5vw,58px);
+      line-height:1.2;
+    }
+
+    .hero p { max-width:680px; color:#d4e1f2; font-size:17px; }
+
+    .section { padding:75px 0 90px; }
+
+    .contact-grid {
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    .panel {
+      padding:30px;
+      border:1px solid var(--border);
+      border-radius:18px;
+      background:white;
+      box-shadow:0 12px 35px rgba(0,30,70,.05);
+    }
+
+    h2 {
+      margin-bottom:14px;
+      color:var(--blue);
+      font-size:28px;
+      line-height:1.3;
+    }
+
+    h3 { margin-bottom:4px; color:var(--blue); font-size:16px; }
+    .muted { color:var(--muted); }
+
+    .contact-item {
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+      padding:18px 0;
+      border-bottom:1px solid var(--border);
+    }
+
+    .contact-item:last-child { border-bottom:0; }
+
+    .contact-icon {
+      display:grid;
+      place-items:center;
+      flex-shrink:0;
+      width:45px;
+      height:45px;
+      border-radius:12px;
+      background:#eaf8fc;
+      font-size:21px;
+    }
+
+    .contact-item p,.contact-item a {
+      color:var(--muted);
+      font-size:14px;
+      overflow-wrap:anywhere;
+    }
+
+    .contact-item a { text-decoration:none; }
+    .contact-item a:hover { color:#008bb8; }
+
+    .whatsapp-button {
+      display:block;
+      margin-top:22px;
+      padding:15px 20px;
+      border-radius:10px;
+      background:#20bd5a;
+      color:white;
+      font-weight:bold;
+      text-align:center;
+      text-decoration:none;
+    }
+
+    .whatsapp-button:hover { background:#159447; }
+
+    .site-footer {
+      padding:25px 0;
+      background:#000b20;
+      color:#cbd5e1;
+      font-size:13px;
+      text-align:center;
+    }
+
+    @media(max-width:1000px) {
+      .header-container { flex-wrap:wrap; justify-content:center; padding:15px 0; }
+      .logo { width:165px; }
+      .main-navigation { justify-content:center; }
+    }
+
+    @media(max-width:760px) {
+      .container { width:calc(100% - 32px); }
+      .header-container { min-height:85px; gap:10px; }
+      .logo { width:145px; max-height:62px; }
+      .main-navigation { width:100%; justify-content:center; }
+      .nav-list { justify-content:center; gap:8px 15px; }
+      .nav-link { font-size:13px; }
+      .header-cta { font-size:12px; }
+      .hero { padding:58px 0; }
+      .section { padding:45px 0 60px; }
+      .contact-grid { grid-template-columns:1fr; }
+      .panel { padding:24px; }
+    }
+    
+.form-group {
+  margin-top: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  font: inherit;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+button.whatsapp-button {
+  width: 100%;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+  </style>
+  <link rel="stylesheet" href="../css/common.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container header-container">
+
+      <a href="../index.html" aria-label="Sado Digital - Accueil">
+        <img src="../images/logo.png" alt="Sado Digital" class="logo">
+      </a>
+
+      <nav class="main-navigation" aria-label="Navigation principale">
+        <ul class="nav-list">
+          <li><a href="../index.html" class="nav-link">Accueil</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+          <li><a href="packs.html" class="nav-link">Packs</a></li>
+          <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+          <li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+        </ul>
+        <a href="devis.html" class="header-cta">Demander un devis</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Contactez-nous</span>
+        <h1>Parlons de votre projet.</h1>
+        <p>Une question, une idée ou un projet numérique ? Écrivez-nous et discutons ensemble de la meilleure façon de vous accompagner.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+
+        <aside class="panel">
+          <h2>Restons en contact</h2>
+          <p class="muted">Vous pouvez nous joindre directement par téléphone, WhatsApp ou e-mail.</p>
+
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📱</div>
+            <div>
+              <h3>Téléphone / WhatsApp</h3>
+              <a href="https://wa.me/225101583058" target="_blank" rel="noopener noreferrer">01 01 58 30 58</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">✉️</div>
+            <div>
+              <h3>E-mail</h3>
+              <a href="mailto:sadodigital@gmail.com">sadodigital@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">💬</div>
+            <div>
+              <h3>Réponse rapide</h3>
+              <p>Présentez votre besoin dans votre message pour faciliter nos échanges.</p>
+            </div>
+          </div>
+        </aside>
+
+<section class="panel">
+  <h2>Envoyez-nous un message</h2>
+  <p class="muted">
+    Une question ? Écrivez-nous, nous serons ravis de vous répondre.
+  </p>
+
+  <form action="https://formsubmit.co/sadodigital@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="Nouveau message - Sado Digital">
+    <input type="hidden" name="_captcha" value="false">
+
+    <div class="form-group">
+      <label for="nom">Votre nom *</label>
+      <input type="text" id="nom" name="Nom" placeholder="Votre nom complet" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Votre e-mail *</label>
+      <input type="email" id="email" name="E-mail" placeholder="Votre adresse e-mail" required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Votre message *</label>
+      <textarea id="message" name="Message" rows="5" placeholder="Écrivez votre message ici..." required></textarea>
+    </div>
+
+    <button type="submit" class="whatsapp-button">
+      Envoyer mon message
+    </button>
+  </form>
+</section>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© Sado Digital. Tous droits réservés.</div>
+  </footer>
+
+</body>
+</html>
