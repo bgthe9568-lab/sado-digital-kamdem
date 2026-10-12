@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez les services de Sado Digital : création de sites web, identité visuelle, communication digitale, informatique et solutions numériques.">
+    <meta name="theme-color" content="#003070">
+    <title>Nos Services | Sado Digital</title>
+
+    <style>
+        :root {
+            --navy: #001030;
+            --blue: #003070;
+            --cyan: #00c8e8;
+            --light-blue: #eaf8fc;
+            --green: #50d820;
+            --white: #ffffff;
+            --background: #f5f8fc;
+            --text: #24344d;
+            --muted: #64748b;
+            --border: #e2eaf4;
+            --radius: 18px;
+            --shadow: 0 12px 35px rgba(0, 30, 70, 0.07);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--background);
+            line-height: 1.7;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 85px 0;
+        }
+
+        .section-heading {
+            max-width: 760px;
+            margin: 0 auto 45px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 14px;
+            color: #007eae;
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h1, h2, h3 {
+            line-height: 1.25;
+        }
+
+        h2 {
+            margin-bottom: 16px;
+            color: var(--blue);
+            font-size: clamp(28px, 4vw, 40px);
+        }
+
+        .section-heading p {
+            color: var(--muted);
+        }
+
+        .btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 49px;
+            padding: 12px 23px;
+            border: 0;
+            border-radius: 9px;
+            background: var(--cyan);
+            color: var(--navy);
+            font-weight: 800;
+            text-decoration: none;
+            transition: transform .2s ease, background .2s ease;
+        }
+
+        .btn:hover {
+            background: var(--green);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 49px;
+            padding: 12px 23px;
+            border: 1px solid rgba(255,255,255,.65);
+            border-radius: 9px;
+            color: var(--white);
+            font-weight: 700;
+            text-decoration: none;
+            transition: background .2s ease;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,.12);
+        }
+
+        
+       
+/* EN-TÊTE ET NAVIGATION — SADO DIGITAL */
+
+/* EN-TÊTE — HARMONISÉ AVEC ACCUEIL */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 3px 18px rgba(0, 20, 60, 0.06);
+}
+
+.site-header .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    min-height: 126px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.site-header .logo-link {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.site-header .logo {
+    display: block;
+    width: 205px;
+    max-height: 95px;
+    object-fit: contain;
+}
+
+.site-header .main-navigation {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.site-header .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 29px;
+    list-style: none;
+}
+
+.site-header .nav-link {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+    color: #001030;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link.active {
+    color: #008bb8;
+}
+
+/* Trait fin animé aux couleurs du logo */
+.site-header .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        #0875c9,
+        #00b9b0 45%,
+        #36c832
+    );
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.site-header .nav-link:hover::after,
+.site-header .nav-link.active::after {
+    transform: scaleX(1);
+}
+
+.site-header .header-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 13px 23px;
+    border-radius: 9px;
+    background: #003070;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+}
+
+.site-header .header-cta:hover {
+    background: #0096e0;
+}
+
+/* Trait animé fin aux couleurs du logo */
+.site-header .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        #0875c9 0%,
+        #00b9b0 45%,
+        #36c832 100%
+    );
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.site-header .nav-link:hover::after,
+.site-header .nav-link.active::after {
+    transform: scaleX(1);
+}
+
+.header-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    border-radius: 9px;
+    background: var(--blue);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+}
+
+.header-cta:hover {
+    background: #0096e0;
+}
+
+.menu-toggle {
+    display: none;
+    width: 45px;
+    height: 45px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--light-blue);
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 5px auto;
+    background: var(--blue);
+}
+        /* BANNIÈRE SERVICES */
+        .services-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 105px 0 95px;
+            background: linear-gradient(135deg, var(--navy), var(--blue));
+            color: var(--white);
+        }
+
+        .services-hero::after {
+            content: "";
+            position: absolute;
+            top: -130px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            border: 1px solid rgba(0, 200, 232, .4);
+            border-radius: 50%;
+            box-shadow:
+                0 0 0 45px rgba(0, 200, 232, .06),
+                0 0 0 90px rgba(0, 200, 232, .04);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .services-hero .eyebrow {
+            color: var(--cyan);
+        }
+
+        .services-hero h1 {
+            max-width: 800px;
+            margin-bottom: 23px;
+            font-size: clamp(36px, 5vw, 58px);
+            letter-spacing: -1.5px;
+        }
+
+        .services-hero p {
+            max-width: 690px;
+            margin-bottom: 30px;
+            color: #d4e1f2;
+            font-size: 17px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        /* CARTES DE SERVICES */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .service-card {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--white);
+            box-shadow: var(--shadow);
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 40px rgba(0, 30, 70, .12);
+        }
+
+        .service-icon {
+            display: grid;
+            place-items: center;
+            width: 54px;
+            height: 54px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            background: var(--light-blue);
+            color: #007eae;
+            font-size: 25px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+            color: var(--blue);
+            font-size: 20px;
+        }
+
+        .service-card p {
+            margin-bottom: 17px;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .service-price {
+            margin-top: auto;
+            padding-top: 14px;
+            color: var(--blue);
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+        .service-price small {
+            display: block;
+            margin-top: 4px;
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        .service-link {
+            display: inline-block;
+            margin-top: 18px;
+            color: #007eae;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .service-link:hover {
+            color: #009b6b;
+        }
+        
+
+/* Trait animé aux couleurs du logo Sado Digital */
+.site-header .nav-link {
+    position: relative;
+}
+
+.site-header .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        #0875c9 0%,
+        #00b9b0 45%,
+        #36c832 100%
+    );
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.site-header .nav-link:hover::after,
+.site-header .nav-link.active::after {
+    transform: scaleX(1);
+}
+
+
+/* Agrandir le logo pour correspondre aux autres pages */
+.site-header .logo-link {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.site-header .logo {
+    width: 220px !important;
+    max-width: none;
+    max-height: 100px;
+    height: auto;
+    object-fit: contain;
+}
+    </style>
+</head>
+
+<body>
+    <!-- =====================================
+         EN-TÊTE
+    ===================================== -->
+    <header class="site-header">
+        <div class="container header-container">
+
+            <a href="../index.html"
+               class="logo-link"
+               aria-label="Sado Digital - Accueil">
+                <img src="../images/logo .png"
+                     alt="Sado Digital"
+                     class="logo">
+            </a>
+
+            <button class="menu-toggle"
+                    id="menu-toggle"
+                    type="button"
+                    aria-label="Ouvrir le menu"
+                    aria-expanded="false"
+                    aria-controls="main-navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-navigation"
+                 id="main-navigation"
+                 aria-label="Navigation principale">
+
+                <ul class="nav-list">
+                    <li>
+                        <a class="nav-link" href="../index.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a class="nav-link active"
+                           href="services.html"
+                           aria-current="page">Services</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="realisations.html">Réalisations</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="packs.html">Packs</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="a-propos.html">À propos</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <a href="devis.html" class="header-cta">Demander un devis</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- =====================================
+             INTRODUCTION
+        ===================================== -->
+        <section class="services-hero">
+            <div class="container hero-content">
+                <span class="eyebrow">Nos expertises</span>
+
+                <h1>Des solutions digitales pensées pour faire grandir votre activité.</h1>
+
+                <p>
+                    Sado Digital vous accompagne dans la création de votre identité,
+                    le développement de votre présence en ligne, la communication
+                    digitale et les solutions informatiques adaptées à vos besoins.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="devis.html" class="btn">Parler de mon projet</a>
+                    <a href="realisations.html" class="btn-outline">
+                        Découvrir nos réalisations
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================
+             IDENTITÉ VISUELLE
+        ===================================== -->
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Image de marque</span>
+                    <h2>Identité visuelle et supports graphiques</h2>
+                    <p>
+                        Donnez à votre entreprise une image professionnelle,
+                        reconnaissable et cohérente sur tous vos supports.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">✳</div>
+                        <h3>Logo professionnel</h3>
+                        <p>
+                            Création d'un logo adapté à votre activité et à l'image
+                            que vous souhaitez transmettre à vos clients.
+                        </p>
+                        <div class="service-price">10 000 – 50 000 FCFA</div>
+                        <a class="service-link" href="devis.html">Demander un devis →</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">▤</div>
+                        <h3>Carte de visite</h3>
+                        <p>
+                            Une carte claire et élégante pour présenter vos
+                            coordonnées et renforcer votre image professionnelle.
+                        </p>
+                        <div class="service-price">15 000 – 30 000 FCFA</div>
+                        <a class="service-link" href="devis.html">Commander ma carte →</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">▧</div>
+                        <h3>Affiche et flyer</h3>
+                        <p>
+                            Création de visuels promotionnels pour vos événements,
+                            produits, services et campagnes commerciales.
+                        </p>
+                        <div class="service-price">20 000 – 40 000 FCFA</div>
+                        <a class="service-link" href="devis.html">Créer mon visuel →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================
+             COMMUNICATION DIGITALE
+        ===================================== -->
+        <section class="section" style="background:#ffffff;">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Présence en ligne</span>
+                    <h2>Communication et visibilité digitale</h2>
+                    <p>
+                        Développez votre présence sur les réseaux sociaux et
+                        améliorez la manière dont vos clients découvrent votre activité.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">f</div>
+                        <h3>Page Facebook professionnelle</h3>
+                        <p>
+                            Mise en place et présentation de votre page pour aider
+                            vos clients à retrouver votre entreprise en ligne.
+                        </p>
+                        <div class="service-price">10 000 – 30 000 FCFA</div>
+                        <a class="service-link" href="devis.html">Créer ma page →</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">↗</div>
+                        <h3>Gestion de page Facebook</h3>
+                        <p>
+                            Accompagnement dans l'animation de votre page et
+                            la publication de contenus selon les besoins convenus.
+                        </p>
+                        <div class="service-price">
+                            150 000 FCFA / mois
+                            <small>Le contenu et la fréquence sont à définir au devis.</small>
+                        </div>
+                        <a class="service-link" href="devis.html">Gérer ma page →</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">⌕</div>
+                        <h3>Référencement local (SEO)</h3>
+                        <p>
+                            Optimisation de votre présence en ligne afin de faciliter
+                            la découverte de votre entreprise dans les recherches locales.
+                        </p>
+                        <div class="service-price">50 000 – 200 000 FCFA</div>
+                        <a class="service-link" href="devis.html">Améliorer ma visibilité →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================
+             CRÉATION WEB
+        ===================================== -->
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Solutions web</span>
+                    <h2>Création et maintenance de sites web</h2>
+                    <p>
+                        Présentez votre activité avec un site professionnel,
+                        accessible sur ordinateur, tablette et téléphone.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">⌘</div>
+                        <h3>Site web vitrine</h3>
+                        <p>
+                            Un site pour présenter votre entreprise, vos services,
+                            vos réalisations et permettre à vos clients de vous contacter.
+                        </p>
+                        <div class="service-price">200 000 – 900 000 FCFA</div>
+                        <a class="service-link" href="devis.html">Créer mon site →</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">▦</div>
+                        <h3>Site web e-commerce</h3>
+                        <p>
+                            Une boutique en ligne pour présenter vos produits
+                            et organiser leur vente sur Internet.
+                        </p>
+                        <div class="service-price">600 000 – 1 500 000 FCFA</div>
+                        <a class="service-link" href="devis.html">Lancer ma boutique →</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">⚙</div>
+                        <h3>Maintenance de site web</h3>
+                        <p>
+                            Suivi technique et interventions de maintenance selon
+                            les besoins et le périmètre défini avec vous.
+                        </p>
+                        <div class="service-price">100 000 – 300 000 FCFA / mois</div>
+                        <a class="service-link" href="devis.html">Maintenir mon site →</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">⌨</div>
+                        <h3>Application web sur mesure</h3>
+                        <p>
+                            Conception d'une application adaptée à un besoin
+                            métier spécifique, après étude de votre projet.
+                        </p>
+                        <div class="service-price">À partir de 500 000 FCFA</div>
+                        <a class="service-link" href="devis.html">Décrire mon application →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================
+             INFORMATIQUE ET RÉSEAUX
+        ===================================== -->
+        <section class="section" style="background:#ffffff;">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Assistance technique</span>
+                    <h2>Informatique, réseaux et assistance</h2>
+                    <p>
+                        Des prestations pour installer, organiser et maintenir
+                        votre environnement informatique.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">▣</div>
+                        <h3>Installation Windows et logiciels</h3>
+                        <p>
+                            Installation du système et des logiciels convenus,
+                            selon la compatibilité de votre matériel.
+                        </p>
+                        <div class="service-price">15 000 – 30 000 FCFA</div>
+                        <a class="service-link" href="devis.html">Demander l'installation →</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">▥</div>
+                        <h3>Maintenance informatique d'entreprise</h3>
+                        <p>
+                            Assistance et maintenance informatique pour accompagner
+                            les besoins courants de votre entreprise.
+                        </p>
+                        <div class="service-price">50 000 – 150 000 FCFA / mois</div>
+                        <a class="service-link" href="devis.html">Obtenir un accompagnement →</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">⌁</div>
+                        <h3>Installation Wi-Fi</h3>
+                        <p>
+                            Mise en place d'un réseau sans fil adapté à l'espace
+                            et aux besoins de connexion de votre environnement.
+                        </p>
+                        <div class="service-price">30 000 – 100 000 FCFA</div>
+                        <a class="service-link" href="devis.html">Installer mon Wi-Fi →</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">⇄</div>
+                        <h3>Installation réseau pour PME</h3>
+                        <p>
+                            Organisation d'un réseau informatique pour faciliter
+                            la connexion des équipements de votre entreprise.
+                        </p>
+                        <div class="service-price">100 000 – 400 000 FCFA</div>
+                        <a class="service-link" href="devis.html">Étudier mon réseau →</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">↗</div>
+                        <h3>Sauvegarde et transfert de données</h3>
+                        <p>
+                            Assistance pour transférer et sauvegarder vos données
+                            selon le matériel disponible et votre besoin.
+                        </p>
+                        <div class="service-price">10 000 – 30 000 FCFA</div>
+                        <a class="service-link" href="devis.html">Transférer mes données →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================
+             MÉTHODE DE TRAVAIL
+        ===================================== -->
+        <section class="section process-section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Notre approche</span>
+                    <h2>Un projet clair, étape par étape</h2>
+                    <p>
+                        Une méthode simple pour comprendre votre besoin,
+                        définir les attentes et réaliser la prestation convenue.
+                    </p>
+                </div>
+
+                <div class="process-grid">
+                    <article class="process-step">
+                        <span class="process-number">ÉTAPE 01</span>
+                        <h3>Comprendre votre besoin</h3>
+                        <p>
+                            Nous échangeons sur votre activité, vos objectifs,
+                            vos attentes et les fonctionnalités souhaitées.
+                        </p>
+                    </article>
+
+                    <article class="process-step">
+                        <span class="process-number">ÉTAPE 02</span>
+                        <h3>Proposer une solution</h3>
+                        <p>
+                            Nous définissons le périmètre du projet, le budget
+                            et le délai prévisionnel dans un devis.
+                        </p>
+                    </article>
+
+                    <article class="process-step">
+                        <span class="process-number">ÉTAPE 03</span>
+                        <h3>Réaliser et livrer</h3>
+                        <p>
+                            Après validation du devis et versement de l'acompte,
+                            nous réalisons la prestation convenue.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================
+             CONDITIONS
+        ===================================== -->
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">En toute transparence</span>
+                    <h2>Nos conditions de prestation</h2>
+                    <p>
+                        Les modalités sont précisées dans le devis avant le début
+                        de chaque projet.
+                    </p>
+                </div>
+
+                <div class="terms-grid">
+                    <article class="term-item">
+                        <h3>01. Modalités de paiement</h3>
+                        <p>
+                            Un acompte de 50 % est demandé avant le démarrage
+                            du projet. Les 50 % restants sont dus à la livraison.
+                        </p>
+                    </article>
+
+                    <article class="term-item">
+                        <h3>02. Validité du devis</h3>
+                        <p>
+                            Le devis est valable pendant 30 jours à compter
+                            de sa date d'émission.
+                        </p>
+                    </article>
+
+                    <article class="term-item">
+                        <h3>03. Délais de réalisation</h3>
+                        <p>
+                            Le délai est confirmé après validation du devis
+                            et réception de l'acompte.
+                        </p>
+                    </article>
+
+                    <article class="term-item">
+                        <h3>04. Travaux supplémentaires</h3>
+                        <p>
+                            Toute demande qui dépasse le périmètre initial
+                            doit être discutée et approuvée avant réalisation.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="pricing-note">
+                    <strong>À noter :</strong>
+                    les prix indiqués sont des fourchettes estimatives.
+                    Le tarif définitif dépend du périmètre, des fonctionnalités,
+                    des éléments à fournir et de la complexité du projet.
+                    Un devis personnalisé sera établi avant le démarrage.
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================
+             APPEL À L'ACTION
+        ===================================== -->
+        <section class="services-cta">
+            <div class="container">
+                <span class="eyebrow">Votre prochain projet commence ici</span>
+                <h2>Parlons de vos objectifs.</h2>
+                <p>
+                    Présentez-nous votre idée, votre activité et vos besoins.
+                    Nous pourrons étudier ensemble la solution adaptée à votre projet.
+                </p>
+                <a href="devis.html" class="btn">Demander un devis</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- =====================================
+         PIED DE PAGE
+    ===================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="../images/logo .png" alt="Sado Digital">
+                    </a>
+                    <p>
+                        Des solutions digitales pour valoriser votre activité
+                        et donner vie à vos projets.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="realisations.html">Réalisations</a></li>
+                        <li><a href="packs.html">Packs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>À votre écoute</h3>
+                    <ul>
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="devis.html">Demander un devis</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © <span id="current-year"></span>
+                    Sado Digital. Tous droits réservés.
+                </p>
+
+                <div class="footer-bottom-links">
+                    <a href="contact.html">Contact</a>
+                    <a href="devis.html">Devis</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =====================================
+         JAVASCRIPT DU MENU ET DE L'ANNÉE
+    ===================================== -->
+    <script>
+        document.getElementById("current-year").textContent =
+            new Date().getFullYear();
+
+        const menuButton = document.getElementById("menu-toggle");
+        const navigation = document.getElementById("main-navigation");
+
+        if (menuButton && navigation) {
+            menuButton.addEventListener("click", function () {
+                const isOpen = navigation.classList.toggle("is-open");
+
+                menuButton.setAttribute("aria-expanded", String(isOpen));
+                menuButton.setAttribute(
+                    "aria-label",
+                    isOpen ? "Fermer le menu" : "Ouvrir le menu"
+                );
+            });
+
+            navigation.querySelectorAll("a").forEach(function (link) {
+                link.addEventListener("click", function () {
+                    navigation.classList.remove("is-open");
+                    menuButton.setAttribute("aria-expanded", "false");
+                    menuButton.setAttribute("aria-label", "Ouvrir le menu");
+                });
+            });
+
+            document.addEventListener("keydown", function (event) {
+                if (event.key === "Escape") {
+                    navigation.classList.remove("is-open");
+                    menuButton.setAttribute("aria-expanded", "false");
+                    menuButton.setAttribute("aria-label", "Ouvrir le menu");
+                }
+            });
+        }
+    </script>
+</body>
+</html>
